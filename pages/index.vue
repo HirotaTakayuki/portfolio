@@ -33,15 +33,15 @@
       <v-row class="ma-12">
 
       <!-- この下からコメントアウト外す：「コードミッション1」 -->
-        <!-- <v-col cols="4" class="px-12"
+        <v-col cols="4" class="px-12"
           v-for="content in contents.contents" :key="content.id">
-          <nuxt-link :to="``">
+          <nuxt-link :to="`/works/${content.id}/`">
             <v-card elevation="2" height="200">
               <v-card-title>{{ content.title }}</v-card-title>
               <v-img :src="content.capture.url" height="240" />
             </v-card>
           </nuxt-link> 
-        </v-col> -->
+        </v-col>
       <!-- この上までコメントアウト外す -->
 
       </v-row>
@@ -54,33 +54,18 @@
 </template>
 
 <script>
-// ここから削除：コードミッション4
-export default {
-  data() {
-    return { contents: 
-    {contents:
-      [
-        // サンプルデータ群
-        {id:1,title:'sample1',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'1.png'}},
-        {id:2,title:'sample2',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'2.png'}},
-        {id:3,title:'sample3',url:'',overview:'',url:'',tech:'',role:'',capture:{url:'3.png'}},
-      ]
-    }
-    };
-  }
-}
-// ここまで削除
+
 
 // この下からコメントアウト外す：コードミッション4
-// export default {
-//   async asyncData({ $microcms }) {
-//     const contents = await $microcms.get({
-//       endpoint: "contents",
-//     });
-//     return {
-//       contents,
-//     };
-//   },
-// };
+ export default {
+   async asyncData({ $microcms }) {
+     const contents = await $microcms.get({
+       endpoint: "contents",
+     });
+     return {
+       contents,
+     };
+   },
+ };
 // この上までコメントアウト外す
 </script>

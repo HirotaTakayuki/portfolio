@@ -1,5 +1,8 @@
 # portfolio
 
+資料
+https://mc0-1.gitbook.io/ptoforiohanzuonnuxtvuejamstack/
+
 ## Build Setup
 
 ```bash

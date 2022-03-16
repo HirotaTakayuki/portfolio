@@ -57,14 +57,14 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
 
   // ここからコメントアウト外す
-  // modules: ["nuxt-microcms-module"],
-  // microcms: {
-  //   options: {
-  //     serviceDomain: process.env.SERVICE_DOMAIN,
-  //     apiKey: process.env.GET_API_KEY,
-  //   },
-  //   mode: process.env.NODE_ENV === "production" ? "server" : "all",
-  // },
+  modules: ["nuxt-microcms-module"],
+  microcms: {
+    options: {
+      serviceDomain: process.env.SERVICE_DOMAIN,
+      apiKey: process.env.GET_API_KEY,
+    },
+    mode: process.env.NODE_ENV === "production" ? "server" : "all",
+  },
   // ここまでコメントアウト外す
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

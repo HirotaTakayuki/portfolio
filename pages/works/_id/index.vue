@@ -4,7 +4,7 @@
       <v-spacer class="my-16" />
 
       <!-- ここからコメントアウト外す -->
-      <!-- <v-row>
+      <v-row>
         <v-col cols="6" align="right">
           <v-img contain height="300" :src="content.capture.url" />
         </v-col>
@@ -13,7 +13,7 @@
           <p class="text-h3 mb-8">{{ content.title }}</p>
           <p class="text-h6 text--primary">{{ content.overview }}</p>
         </v-col>
-      </v-row> -->
+      </v-row>
       <!-- ここまでコメントアウト外す -->
 
 
@@ -41,26 +41,17 @@
 </template>
 
 <script>
-// ここから削除：「コードミッション4」
-export default {
-  data() {
-    return { 
-    content:{id:1,title:'sample1',url:'',overview:'',tech:'',role:'',capture:{url:'/1.png'}}
-    };
-  }
-}
-// ここまで削除
 
 // この下からコメントアウト外す：「コードミッション4」
-// export default {
-//   async asyncData({ $microcms, params }) {
-//     const content = await $microcms.get({
-//       endpoint: `contents/${params.id}`,
-//     });
-//     return {
-//       content,
-//     };
-//   },
-// };
+ export default {
+   async asyncData({ $microcms, params }) {
+     const content = await $microcms.get({
+       endpoint: `contents/${params.id}`,
+     });
+     return {
+       content,
+     };
+   },
+ };
 // この上までコメントアウト外す
 </script>
