@@ -16,6 +16,8 @@ $ yarn dev
 $ yarn build
 $ yarn start
 
+git push https://github.com/HirotaTakayuki/portfolio.git master
+
 # generate static project
 $ yarn generate
 ```
