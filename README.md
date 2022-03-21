@@ -78,3 +78,5 @@ More information about the usage of this directory in [the documentation](https:
 https://confident-goldwasser-a468fd.netlify.app/
 
 
+git push https://github.com/HirotaTakayuki/portfolio.git master
+
