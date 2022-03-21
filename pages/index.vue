@@ -49,7 +49,7 @@
       <!-- モーダル -->
       <v-row class="ma-12">
 
-        <transition name="modal" appear>
+        <!-- <transition name="modal" appear>
           <div class="modal__overlay">
             <div class="modal__window">
               <div class="modal__content">
@@ -57,7 +57,7 @@
               </div>
             </div>
           </div>
-        </transition>
+        </transition> -->
 
       </v-row>
     </v-col>
