@@ -80,3 +80,11 @@ https://confident-goldwasser-a468fd.netlify.app/
 
 git push https://github.com/HirotaTakayuki/portfolio.git master
 
+アニメ
+https://waifu.lofiu.com/index.jp.html
+
+
+## 機能一覧
+モーダル
+
+https://zenn.dev/naoki_oshiumi/articles/9cb55513c40848

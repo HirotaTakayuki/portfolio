@@ -1,8 +1,11 @@
 <template>
+
+
+
   <v-row justify="center">
     <!-- ここから自分の情報に編集してください -->
     <!-- ヘッダー画像 -->
-    <v-img src="/header_img.png" width="100%" height="240" />
+    <v-img src="/header4_img.png" width="70%" height="900" />
 
     <v-col cols="12" align="center">
       <!-- アイコン画像 -->
@@ -65,6 +68,26 @@
     <div class="button-area">
       <nuxt-link to="/contact/" class="button">お問い合わせ</nuxt-link>
     </div>
+
+    <button @click="on">表示</button>
+    <div class="modal" v-bind:class="modal_class">
+      <div class="modal-background" @click="on"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Modal title</p>
+            <button class="delete" aria-label="close"  @click="on"></button>
+          </header>
+          <section class="modal-card-body">
+
+          <!-- Content ... -->
+          </section>
+      
+      <footer class="modal-card-foot">
+        <button class="button is-success">Save changes</button>
+        <button class="button" @click="on">Cancel</button>
+      </footer>
+      </div>
+    </div>
   </v-row>
 </template>
 
@@ -72,18 +95,35 @@
 
 
 // この下からコメントアウト外す：コードミッション4
- export default {
-   async asyncData({ $microcms }) {
-     const contents = await $microcms.get({
-       endpoint: "contents",
-     });
-     return {
-       contents,
-     };
-   },
+export default {
+  async asyncData({ $microcms }) {
+    const contents = await $microcms.get({
+      endpoint: "contents",
+    });
+    return {
+      contents,
+    };
+  },
 
- };
+    data(){
+        return {
+          modal_class:""
+        }
+    },
+    methods:{
+      on:function(){
+        if (this.modal_class == "is-active"){
+          this.modal_class = ""
+        }else{
+          this.modal_class = "is-active"
+        }
+      }
+    }
+
+};
 // この上までコメントアウト外す
+
+
 </script>
 
 <style lang="scss" scoped>

@@ -10,7 +10,7 @@
         <nuxt />
       </v-container>
     </v-main>
-    <p class="footer mt-6">© 2022 MarkingCloud</p>
+    <p class="footer mt-6">© 2022 XXXXX</p>
   </v-app>
 </template>
 
